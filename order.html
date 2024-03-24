@@ -1,0 +1,65 @@
+<!-- order.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+<body class="back">
+    <div class="container">
+        <h1>Order Form</h1>
+        <form id="orderForm" action="submit.html" method="post" onsubmit="submitForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="number">Number:</label>
+            <input type="text" id="number" name="number" required><br><br>
+            
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required><br><br>
+            
+            <p>Check boxes:</p>
+            <div id="checkboxes">
+                <input type="checkbox" id="alcapone" name="alcapone" value="30">
+                <label for="alcapone">Alcapone Donut - ₱30</label><br>
+
+                <input type="checkbox" id="munchkin" name="munchkin" value="30">
+                <label for="munchkin">munchkin - ₱30</label><br>
+
+                <input type="checkbox" id="Trio donut" name="Trio donut" value="60">
+                <label for="Trio donut">Trio donut - ₱60</label><br>
+
+                <input type="checkbox" id="chocolate donut" name="chocolate donut" value="20">
+                <label for="chocolate donut">chocolate donut - ₱20</label><br>
+
+                <input type="checkbox" id="strawberry donut" name="strawberry donut" value="50">
+                <label for="strawberry donut">strawberry donut - ₱50</label><br>
+
+                <input type="checkbox" id="sprinkles donut" name="sprinkles donut" value="20">
+                <label for="sprinkles donut">sprinkles donut - ₱20</label><br>
+
+                <input type="checkbox" id="glaze donut" name="glaze donut" value="30">
+                <label for="glaze donut">glaze donut - ₱30</label><br>
+
+                <input type="checkbox" id="ube donut" name="ube donut" value="35">
+                <label for="ube donut">ube donut - ₱35</label><br>
+
+                <input type="checkbox" id="macha donut" name="macha donut" value="50">
+                <label for="macha donut">macha donut - ₱50</label><br>
+                <!-- Other checkboxes -->
+            </div>
+            
+            <button type="button" onclick="calculatePrice()">Calculate Price</button><br><br>
+            
+            <label for="totalPrice">Total Price:</label>
+            <input type="text" id="totalPrice" name="totalPrice" readonly><br><br>
+            
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+
+    <script src="order.js"></script>
+</body>
+</html>
